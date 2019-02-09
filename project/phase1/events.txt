@@ -1,0 +1,151 @@
+// A file that records the events.
+
+Admin | opens the transit system | on 2018 04 04 05 00
+Wen Wang, wangwen@gmail.com | buys a card| on 2018 04 04 06 00
+Kamila, kamila@gmail.com | buys a card | on 2018 04 04 06 01
+Kamila, kamila@gmail.com | buys a card | on 2018 04 04 06 02
+00000002 | adds | $20 | on 2018 04 04 06 03
+Melissa, melissa@gmail.com | buys a card | on 2018 04 04 06 04
+00000004 | adds | $50 | on 2018 04 04 06 05
+
+// Test the case that a travel is over $6 within two hour cap and a
+// continuous trip (from subway to bus and from bus to subway).
+00000004 | taps in at | Midland Stop | on 2018 04 04 13 00
+00000004 | taps off at | Warden Stop | on 2018 04 04 13 20
+00000004 | taps in at | Warden Stop | on 2018 04 04 13 30
+00000004 | taps off at | Finch Stop | on 2018 04 04 13 50
+00000004 | taps in at | Finch Stop | on 2018 04 04 14 00
+00000004 | taps off at |Bay Stop | on 2018 04 04 14 20
+00000004 | taps in at | Bay Station | on 2018 04 04 14 30
+00000004 | taps off at | St.George Station | on 2018 04 04 14 40
+00000004 | taps in at | St.George Stop| on 2018 04 04 14 50
+00000004 | taps off at | History Stop | on 2018 04 04 15 00
+
+Admin | closes the transit system | on 2018 04 04 23 59
+
+Admin | opens the transit system | on 2018 05 05 05 00
+
+// Test the case that a travel is over $6 within two hour cap and
+// a disjointed trip (from subway to bus and from bus to subway).
+00000004 | taps in at | Midland Stop | on 2018 05 05 13 00
+00000004 | taps off at | Warden Stop | on 2018 05 05 13 20
+00000004 | taps in at | Warden Stop | on 2018 05 05 13 30
+00000004 | taps off at | Finch Stop | on 2018 05 05 13 50
+00000004 | taps in at | Finch Stop | on 2018 05 05 14 00
+00000004 | taps off at | Bay Stop | on 2018 05 05 14 20
+00000004 | taps in at | Bay Station | on 2018 05 05 14 30
+00000004 | taps off at | St.George Station | on 2018 05 05 14 40
+00000004 | taps in at | Museum Stop | on 2018 05 05 14 50
+00000004 | taps off at | Union Stop | on 2018 05 05 15 00
+
+Admin | closes the transit system | on 2018 05 05 23 59
+Admin | opens the transit system | on 2018 06 06 05 00
+
+// Test the case that a travel is beyond two hour cap and the transit is from bus to subway.
+00000004 | taps in at | Midland Stop | on 2018 06 06 13 00
+00000004 | taps off at | Warden Stop | on 2018 06 06 13 20
+00000004 | taps in at | Warden Stop | on 2018 06 06 13 30
+00000004 | taps off at | Finch Stop | on 2018 06 06 13 50
+00000004 | taps in at | Finch Stop | on 2018 06 06 14 00
+00000004 | taps off at | Bay Stop | on 2018 06 06 15 20
+00000004 | taps in at | Bay Station | on 2018 06 06 15 30
+00000004 | taps off at | St.George Station | on 2018 06 06 15 50
+Admin | prints the daily report to the screen | on 2018 06 06 23 00
+Admin | closes the transit system | on 2018 06 06 23 59
+
+Admin | opens the transit system | on 2018 07 03 05 00
+// Test the case that enter a subway station and immediately exit.
+00000001 | taps in at | St. George Station | on 2018 07 03 13 50
+00000001 | taps off at | St. George Station | on 2018 07 03 13 50
+Admin | closes the transit system | on 2018 07 03 23 59
+
+Admin | opens the transit system | on 2018 07 04 05 00
+// Change a cardholder to test the case that a travel is within two hour cap
+// and a continuous trip (from subway to bus and from bus to subway).
+00000001 | taps in at | Midland Stop | on 2018 07 04 13 00
+00000001 | taps off at | Warden Stop | on 2018 07 04 13 20
+00000001 | taps in at | Warden Stop | on 2018 07 04 13 30
+00000001 | taps off at | Finch Stop | on 2018 07 04 13 50
+00000001 | taps in at | Finch Stop | on 2018 07 04 14 00
+00000001 | taps off at | Bay Stop | on 2018 07 04 14 20
+00000001 | taps in at | Bay Station | on 2018 07 04 14 30
+00000001 | taps off at | St.George Station | on 2018 07 04 14 40
+00000001 | taps in at | St.George Stop | on 2018 07 04 14 50
+00000001 | taps off at | History Stop | on 2018 07 04 15 00
+Admin | closes the transit system | on 2018 07 04 23 59
+
+Admin | opens the transit system | on 2018 07 05 05 00
+// Change a cardholder to test the case that a travel is within two hour cap and
+// a disjointed trip (from subway to bus and from bus to subway).
+00000001 | taps in at | Midland Stop | on 2018 07 05 13 00
+00000001 | taps off at | Warden Stop | on 2018 07 05 13 20
+00000001 | taps in at | Warden Stop | on 2018 07 05 13 30
+00000001 | taps off at | Finch Stop | on 2018 07 05 13 50
+00000001 | taps in at | Finch Stop| on 2018 07 05 14 00
+00000001 | taps off at | Bay Stop | on 2018 07 05 14 20
+00000001 | taps in at | Bay Station | on 2018 07 05 14 30
+00000001 | taps off at | St.George Station | on 2018 07 05 14 40
+00000001 | taps in at | Museum Stop | on 2018 07 05 14 50
+00000001 | taps off at | Union Stop | on 2018 07 05 15 00
+Admin | closes the transit system | on 2018 07 05 23 59
+
+Admin | opens the transit system | on 2018 07 06 05 00
+// Change a person to test the case that a travel is beyond two hour cap and the transit is from bus to subway.
+00000001 | taps in at | Midland Stop | on 2018 07 06 13 00
+00000001 | taps off at | Warden Stop | on 2018 07 06 13 20
+00000001 | taps in at | Warden Stop | on 2018 07 06 13 30
+00000001 | taps off at | Finch Stop | on 2018 07 06 13 50
+00000001 | taps in at | Finch Stop | on 2018 07 06 14 00
+00000001 | taps off at | Bay Stop | on 2018 07 06 15 20
+// The balance of the card 00000001 is negative.
+00000001 | taps in at | Bay Station | on 2018 07 06 15 30
+00000001 | adds | $50 | on 2018 07 06 15 35
+// Continue the travel, from bus to subway
+00000001 | taps in at | Bay Station | on 2018 07 06 15 40
+00000001 | taps off at | St.George Station | on 2018 07 06 15 50
+Admin| closes the transit system | on 2018 07 06 23 59
+
+Admin | opens the transit system | on 2018 07 07 05 00
+// Test the case that a travel is beyond two hour cap and the transit is from subway to bus.
+00000002 | taps in at | Midland Stop | on 2018 07 07 13 00
+00000002 | taps off at | Warden Stop | on 2018 07 07 13 20
+00000002 | taps in at | Warden Stop | on 2018 07 07 13 30
+00000002 | taps off at | Finch Stop | on 2018 07 07 13 50
+00000002 | taps in at | Finch Stop | on 2018 07 07 14 00
+00000002 | taps off at | Bay Stop | on 2018 07 07 14 20
+00000002 | taps in at | Bay Station | on 2018 07 07 14 30
+00000002 | taps off at | St.George Station | on 2018 07 07 14 40
+// Over 2 hours and from subway to bus
+00000002 | taps in at | St.George stop | on 2018 07 07 15 10
+00000002 | taps off at | History stop | on 2018 07 07 15 20
+Admin | closes the transit system | on 2018 07 07 23 59
+
+Admin | opens the transit system | on 2018 07 08 05 00
+// Hardware malfunctions due to a power outage.
+Hardware | malfunctions due to a power outage | on 2018 07 08 08 00
+00000003 | taps in at | Bay Stop | on 2018 07 08 08 30
+// Hardware recovers.
+Hardware | recovers | on 2018 07 08 50
+
+00000003 | taps in at | Bay Station | on 2018 07 08 10 00
+00000003 | taps in at | St.George Stop | on 2018 07 08 10 30
+00000003 | taps off at | History Stop | on 2018 07 08 10 50
+Admin | closes the transit system | on 2018 07 08 23 59
+
+Admin | opens the transit system | on 2018 07 09 05 00
+00000003 | taps off at | History Stop | on 2018 07 09 10 50
+
+Kamila, kamila@gmail.com | removes | card 00000002 | on 2018 07 09 11 00
+Wen Wang, wangwen@gmail.com | changes name to | Lisa | on 2018 07 09 12 00
+
+Lisa, wangwen@gmail.com | suspends a stolen | card 00000001 | on 2018 07 09 13 00
+Lisa, wangwen@gmail.com | buys a card | on 2018 07 09 14 00
+Lisa, wangwen@gmail.com | reactivates | card 00000001 | on 2018 07 09 15 00
+Lisa, wangwen@gmail.com | views three most recent trip | on 2018 07 09 16 00
+Kamila, kamila@gmail.com | views three most recent trip | on 2018 07 09 17 00
+Melissa, melissa@gmail.com | views three most recent trip | on 2018 07 09 18 00
+Lisa, wangwen@gmail.com | tracks the average transit cost per month | on 2018 07 09 19 00
+Kamila, kamila@gmail.com | tracks the average transit cost per month | on 2018 07 09 19 01
+Melissa, melissa@gmail.com | tracks the average transit cost per month | on 2018 07 09 19 02
+Admin | prints the daily report to the screen| on 2018 07 09 23 00
+Admin | closes the transit system | on 2018 07 09 23 59
