@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="400.0"
+            xmlns="http://javafx.com/javafx/2.2" fx:controller="TrafficSystem.Controller.DashboardController">
+    <children>
+        <VBox layoutX="113.0" layoutY="146.0" prefHeight="160.0" prefWidth="175.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#handleUser" prefHeight="46.0" prefWidth="175.0" text="User"/>
+                <Button mnemonicParsing="false" onAction="#handleAdmin" prefHeight="46.0" prefWidth="175.0"
+                        text="Administrator"/>
+                <Button mnemonicParsing="false" onAction="#handleSetTime" prefHeight="46.0" prefWidth="175.0"
+                        text="Set Time"/>
+            </children>
+        </VBox>
+        <Text layoutX="114.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard">
+            <font>
+                <Font size="33.0"/>
+            </font>
+        </Text>
+        <TextField fx:id="time" editable="false" layoutX="113.0" layoutY="319.0" prefHeight="46.0"
+                   prefWidth="175.00009999999747"/>
+        <Label layoutX="118.0" layoutY="309.0" prefHeight="38.0" prefWidth="85.0" text="Time:" textFill="#606060">
+            <font>
+                <Font size="12.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

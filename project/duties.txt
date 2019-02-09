@@ -1,0 +1,25 @@
+Wen Wang:
+Creates GUI and controllers.
+Modifies GUI features and buttons.
+Deals with connections between scenes.
+Builds connections between buttons and system features.
+
+Yufei Ye:
+Builds logger and the main class to run the program.
+Modifies GUI features and buttons and debugging.
+Modifies and embellishes GUI.
+Adds javadoc.
+
+Xiaomeng Hu:
+Serialize and deserialize objects in the system.
+Deals with admin and system features.
+Creates CardManager, CardHolderManager, TicketManager, CardHolder…
+Helped to complete Gui.
+Adds javadoc.
+
+Xiao Xuan Wang:
+Deals with card fares.
+Fixes and creates card features.
+Creates Card, CardReader, FareStrategy, MonthLyCard, Ticket…
+Create ticket feature.
+Helped to complete Gui

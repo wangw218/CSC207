@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="400.0"
+            xmlns="http://javafx.com/javafx/2.2" fx:controller="TrafficSystem.Controller.NewHolderController">
+    <children>
+        <ChoiceBox fx:id="identity" layoutX="107.0" layoutY="206.0" prefWidth="229.0"/>
+        <TextField fx:id="NewEmail" layoutX="107.0" layoutY="104.0" prefWidth="229.0"/>
+        <Text layoutX="42.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:"/>
+        <TextField fx:id="NewUserName" layoutX="107.0" layoutY="155.0" prefWidth="229.0"/>
+        <Text layoutX="42.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:"/>
+        <Button layoutX="89.0" layoutY="272.0" mnemonicParsing="false" onAction="#handleNewUser" prefHeight="35.0"
+                prefWidth="101.0" text="Submit"/>
+        <Button layoutX="210.0" layoutY="272.0" mnemonicParsing="false" onAction="#Reset" prefHeight="35.0"
+                prefWidth="101.0" text="Reset"/>
+        <Button layoutX="14.0" layoutY="22.0" minWidth="29.0" mnemonicParsing="false" onAction="#back" prefHeight="23.0"
+                prefWidth="38.0" text="&lt;"/>
+        <Text layoutX="60.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Back to login"/>
+        <Text layoutX="42.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Identity:"/>
+    </children>
+</AnchorPane>

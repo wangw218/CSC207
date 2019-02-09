@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="400.0"
+            xmlns="http://javafx.com/javafx/2.2" fx:controller="TrafficSystem.Controller.CurUserController">
+    <children>
+        <AnchorPane layoutX="1.0" layoutY="0.0" prefHeight="400.0" prefWidth="400.0">
+            <children>
+                <TextField id="NewEmail" fx:id="emails" layoutX="107.0" layoutY="115.0" prefWidth="229.0"/>
+                <Text layoutX="42.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:"/>
+                <Button layoutX="210.0" layoutY="248.0" mnemonicParsing="false" onAction="#Reset" prefHeight="35.0"
+                        prefWidth="101.0" text="Reset"/>
+                <Button layoutX="14.0" layoutY="14.0" minWidth="-1.0" mnemonicParsing="false" onAction="#back"
+                        prefHeight="25.0" prefWidth="25.0" text="&lt;"/>
+                <Text layoutX="54.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      text="Back to choose holder"/>
+                <Button layoutX="89.0" layoutY="248.0" mnemonicParsing="false" onAction="#handleCurUser"
+                        prefHeight="35.0" prefWidth="101.0" text="Submit"/>
+                <Button layoutX="150.0" layoutY="302.0" mnemonicParsing="false" onAction="#handleSignUp"
+                        prefHeight="25.0" prefWidth="101.0" text="Sign Up"/>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

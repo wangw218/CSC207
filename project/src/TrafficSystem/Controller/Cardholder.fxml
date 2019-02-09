@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import java.lang.String?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="371.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/2.2"
+            fx:controller="TrafficSystem.Controller.CardholderController">
+    <children>
+        <Label layoutX="1155.0" layoutY="804.0"/>
+        <TabPane layoutX="0.0" layoutY="0.0" prefHeight="350.0" prefWidth="400.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="    Cardholder    ">
+                    <content>
+                        <AnchorPane fx:id="ap" minHeight="0.0" minWidth="0.0" prefHeight="524.0" prefWidth="401.0">
+                            <children>
+                                <GridPane fx:id="gp" layoutX="23.0" layoutY="67.0" prefHeight="157.0" prefWidth="355.0">
+                                    <children>
+                                        <Button mnemonicParsing="false" onAction="#handleChangeName" prefHeight="46.0"
+                                                prefWidth="279.0" text="Change Name" GridPane.columnIndex="0"
+                                                GridPane.rowIndex="0"/>
+                                        <Button mnemonicParsing="false" onAction="#handleBuyMonthlyCard"
+                                                prefHeight="46.0" prefWidth="280.0" text="Buy Monthly Card"
+                                                GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                                        <Button mnemonicParsing="false" onAction="#handleBuyNormalCard"
+                                                prefHeight="46.0" prefWidth="280.0" text="Buy Normal Card"
+                                                GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                                        <Button mnemonicParsing="false" onAction="#handleViewTrip" prefHeight="46.0"
+                                                prefWidth="280.0" text="View Trip" GridPane.columnIndex="0"
+                                                GridPane.rowIndex="2"/>
+                                        <Button mnemonicParsing="false" onAction="#handleTrackAverage" prefHeight="46.0"
+                                                prefWidth="281.0" text="Track Average" GridPane.columnIndex="1"
+                                                GridPane.rowIndex="1"/>
+                                        <Button fx:id="identity" mnemonicParsing="false" onAction="#handleBuySSCard"
+                                                prefHeight="46.0" prefWidth="280.0" text="Student / Senior"
+                                                GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                                    </children>
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.0" minWidth="10.0"
+                                                           prefWidth="158.0"/>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0"
+                                                           prefWidth="151.0"/>
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="55.41557312011719" minHeight="10.0"
+                                                        prefHeight="52.4493408203125" vgrow="SOMETIMES"/>
+                                        <RowConstraints maxHeight="65.88180541992188" minHeight="10.0"
+                                                        prefHeight="54.5506591796875" vgrow="SOMETIMES"/>
+                                        <RowConstraints maxHeight="53.881805419921875" minHeight="10.0"
+                                                        prefHeight="53.881805419921875" vgrow="SOMETIMES"/>
+                                    </rowConstraints>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="         Card         ">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="264.0000999999975" prefWidth="400.0">
+                            <children>
+                                <Label layoutX="31.0" layoutY="39.0" text="Card Numeber:"/>
+                                <GridPane layoutX="23.0" layoutY="88.0" prefHeight="157.0" prefWidth="355.0">
+                                    <children>
+                                        <Button fx:id="act" mnemonicParsing="false" onAction="#handleActivateCard"
+                                                prefHeight="83.0" prefWidth="196.0" text="Activate Card"
+                                                GridPane.columnIndex="1"/>
+                                        <Button fx:id="remove" mnemonicParsing="false" onAction="#handleRemoveCard"
+                                                prefHeight="52.0" prefWidth="198.0" text="Remove Card"/>
+                                        <Button fx:id="sus" mnemonicParsing="false" onAction="#handleSuspendCard"
+                                                prefHeight="81.0" prefWidth="196.0" text="Suspend Card"
+                                                GridPane.rowIndex="1"/>
+                                        <Button fx:id="travel" mnemonicParsing="false" onAction="#handleTravel"
+                                                prefHeight="92.0" prefWidth="225.0" text="Travel"
+                                                GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                                    </children>
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.0" minWidth="10.0"
+                                                           prefWidth="174.0"/>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="181.0" minWidth="10.0"
+                                                           prefWidth="177.0"/>
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="55.41557312011719" minHeight="10.0"
+                                                        prefHeight="52.4493408203125" vgrow="SOMETIMES"/>
+                                        <RowConstraints maxHeight="65.88180541992188" minHeight="10.0"
+                                                        prefHeight="54.5506591796875" vgrow="SOMETIMES"/>
+                                        <RowConstraints maxHeight="53.881805419921875" minHeight="10.0"
+                                                        prefHeight="53.881805419921875" vgrow="SOMETIMES"/>
+                                    </rowConstraints>
+                                </GridPane>
+                                <ChoiceBox fx:id="moneyAmount" layoutX="31.0" layoutY="240.0" prefHeight="20.0"
+                                           prefWidth="269.0">
+                                    <items>
+                                        <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="$10"/>
+                                            <String fx:value="$20"/>
+                                            <String fx:value="$50"/>
+                                        </FXCollections>
+                                    </items>
+                                </ChoiceBox>
+                                <Label layoutX="31.0" layoutY="220.0" prefHeight="17.0" prefWidth="97.0"
+                                       text="Load Money:"/>
+                                <Button fx:id="load" layoutX="316.0" layoutY="240.0" mnemonicParsing="false"
+                                        onAction="#handleLoadMoney" prefHeight="20.0" prefWidth="45.0" text="OK"/>
+                                <ChoiceBox fx:id="cards" onAction="#handleChooseCard" layoutX="139.0" layoutY="37.0"
+                                           prefHeight="20.0" prefWidth="161.0"/>
+                                <Button id="check" fx:id="checkBalance" disable="true" layoutX="187.0" layoutY="270.0"
+                                        minHeight="16.51025390625" mnemonicParsing="false" onAction="#handleBalance"
+                                        prefHeight="25.0" prefWidth="174.0" text="Check Balance"/>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <Button layoutX="14.0" layoutY="332.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0"
+                prefWidth="25.0" text="&lt;"/>
+        <Text layoutX="53.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Back to User"/>
+    </children>
+</AnchorPane>

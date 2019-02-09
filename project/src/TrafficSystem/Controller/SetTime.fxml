@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="400.0"
+            xmlns="http://javafx.com/javafx/2.2" fx:controller="TrafficSystem.Controller.SetTimeController">
+    <children>
+        <ChoiceBox fx:id="yearBox" layoutX="155.0" layoutY="123.0" prefWidth="150.0"/>
+        <ChoiceBox fx:id="monthBox" layoutX="155.0" layoutY="156.0" prefWidth="150.0"/>
+        <ChoiceBox fx:id="dayBox" layoutX="155.0" layoutY="189.0" prefWidth="150.0"/>
+        <ChoiceBox fx:id="hourBox" layoutX="155.0" layoutY="224.0" prefWidth="150.0"/>
+        <ChoiceBox fx:id="minutesBox" layoutX="155.0" layoutY="258.0" prefWidth="150.0"/>
+        <Button layoutX="112.0" layoutY="336.0" mnemonicParsing="false" onAction="#handleConfirm" prefWidth="80.0"
+                text="Confirm"/>
+        <Button layoutX="204.0" layoutY="336.0" mnemonicParsing="false" onAction="#back" prefWidth="80.0" text="Exit"/>
+        <Text layoutX="95.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YY:"/>
+        <Text layoutX="95.0" layoutY="172.0" scaleX="1.0" scaleY="0.9999926063939905" strokeType="OUTSIDE"
+              strokeWidth="0.0" text="MM:"/>
+        <Text layoutX="95.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DD:"/>
+        <Text layoutX="95.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hour:"/>
+        <Text layoutX="95.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minute:"/>
+        <Text layoutX="130.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Set Time As">
+            <font>
+                <Font size="25.0"/>
+            </font>
+        </Text>
+    </children>
+</AnchorPane>

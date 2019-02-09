@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="ap" maxHeight="1.7976931348623157E308"
+            maxWidth="1.7976931348623157E308"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0"
+            xmlns="http://javafx.com/javafx/8" fx:controller="TrafficSystem.Controller.MapController">
+    <children>
+        <Label fx:id="startT" layoutX="54.0" layoutY="128.0" prefHeight="39.0" prefWidth="85.0" text="Start:"
+               textAlignment="RIGHT"/>
+        <Label fx:id="endT" layoutX="54.0" layoutY="181.0" prefHeight="39.0" prefWidth="85.0" text="End:"
+               textAlignment="RIGHT"/>
+        <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0"
+                prefWidth="25.0" text="&lt;"/>
+        <Button fx:id="in" layoutX="125.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleTapIn"
+                prefHeight="25.0" prefWidth="69.0" text="Tap In"/>
+        <Button fx:id="off" layoutX="223.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleTapOff"
+                prefHeight="24.999900000002526" text="Tap Off"/>
+        <ChoiceBox fx:id="startBox" layoutX="125.0" layoutY="135.0" minHeight="17.0" prefHeight="25.0"
+                   prefWidth="216.0"/>
+        <ChoiceBox fx:id="endBox" layoutX="125.0" layoutY="185.0" minHeight="17.0" prefHeight="25.0" prefWidth="216.0"/>
+        <Text layoutX="54.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Back "/>
+        <Button layoutX="231.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleSetTime" prefHeight="30.0"
+                prefWidth="149.0" text="Set Time"/>
+        <Button layoutX="231.0" layoutY="48.0" mnemonicParsing="false" onAction="#handleNextTime" prefHeight="30.0"
+                prefWidth="149.0" text="Next Bus/Subway"/>
+    </children>
+</AnchorPane>

@@ -1,0 +1,24 @@
+Jan 24, 2019 8:30:34 PM TrafficSystem.SystemLogger log
+WARNING: Failed to serialize.
+Jan 24, 2019 8:32:32 PM TrafficSystem.SystemLogger log
+INFO: wang wang@gmail.com buys a new monthly card: 00000000
+Jan 24, 2019 8:32:46 PM TrafficSystem.SystemLogger log
+INFO: Card 00000000 is suspended.
+Jan 24, 2019 8:32:48 PM TrafficSystem.SystemLogger log
+INFO: Card 00000000 is activated.
+Jan 24, 2019 8:32:50 PM TrafficSystem.SystemLogger log
+INFO: Card 00000000 is suspended.
+Jan 24, 2019 8:33:01 PM TrafficSystem.SystemLogger log
+INFO: Card 00000000 is activated.
+Jan 24, 2019 8:33:17 PM TrafficSystem.SystemLogger log
+INFO: wang wang@gmail.com buys a new monthly card: 00000001
+Jan 24, 2019 8:33:39 PM TrafficSystem.SystemLogger log
+INFO: Card 00000001 has been removed from wang's account.
+Jan 24, 2019 8:33:57 PM TrafficSystem.SystemLogger log
+INFO: Visitor buys a ticket t00000000: Eiglinton-Rosedale
+Jan 24, 2019 8:34:39 PM TrafficSystem.SystemLogger log
+INFO: wang wang@gmail.com buys a new card: 00000002
+Jan 24, 2019 8:34:46 PM TrafficSystem.SystemLogger log
+INFO: Adds 50 dollars to card 00000002. Card balance: 69.0
+Jan 24, 2019 8:34:48 PM TrafficSystem.SystemLogger log
+INFO: Card 00000002 is suspended.
