@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="generator" content="HTML Tidy for HTML5 (experimental) for Mac OS X https://github.com/w3c/tidy-html5/tree/c63cc39">
+        <title>
+            CSC207H: Assignment 2
+        </title>
+    </head>
+    <body>
+        <h1>
+            CSC207H: Assignment 2
+        </h1>
+        <p>
+            <strong>Group size:</strong> Individual
+        </p>
+        <p>
+            <strong>Summary:</strong> Refactor a mostly-working program that has significant style and design flaws, clean it up so that it sparkles like a Shakespearean sonnet, and add a feature.
+        </p>
+        <h2>
+            Learning objectives
+        </h2>
+        <p>
+            By the end of this assignment, you will have
+        </p>
+        <ul>
+            <li>worked with version control, making frequent commits to your git repository,
+            </li>
+            <li>read and worked with code that is not well designed,
+            </li>
+            <li>refactored the code to make it more readable and maintainable,
+            </li>
+            <li>extensively used IntelliJ's refactoring and debugging tools,
+            </li>
+            <li>found and fixed one bug (using the debugger),
+            </li>
+            <li>added a feature to the refactored code,
+            </li>
+            <li>written useful Javadoc and internal comments, and maintained or improved the visual style of the given code,
+            </li>
+            <li>Used inheritance extensively to clean up code.
+            </li>
+        </ul>
+        <h2>
+            Problem domain
+        </h2>
+        <p>
+            For this assignment, you will work with a Java program that simulates a farm. The farm has a few animals and each animal moves around and has some behaviour. We also have a human that collects eggs. (The starter code mostly does this, but it's really gross code and has some significant bugs.) 
+        </p>
+
+	   <p>
+            The code was written years ago and can be improved in many ways. Imagine that someone at your company found this code and it was decided that you would improve it so that it can be marketed as a new farm simulator. Throughout this assignment, your ultimate goal is to make the code easy to read by other people and easy to modify, in case you want to repurpose this code later.
+        </p>
+        <h2>
+            Code Smells
+        </h2>
+        <p>
+            In this assignment, you will be finding and fixing <a target="_blank" href="https://en.wikipedia.org/wiki/Code_smell">Code smells [Wikipedia]</a>, which are warning signs in your code. Take a look at the list of common code smells on that Wikipedia page. There are related <a target="_blank" href="https://en.wikipedia.org/wiki/Design_smell">Design smells [Wikipedia]</a>, which you should also read about.
+        </p>
+        <p>
+            Here is a blog post that discusses some of <a target="_blank" href="https://blog.codinghorror.com/code-smells/">the more common smells</a>. If you <strong> really</strong> want to dive deep you can <a target="_blank" href="https://www.amazon.ca/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882"> read Clean Code</a> or summaries of it like <a target="_blank" href="https://github.com/ryanmcdermott/clean-code-javascript"> this one</a> but it is completely optional.
+        </p>
+        <h2>
+            Getting set up
+        </h2>
+        <p>
+            Open IntelliJ on your home computer. Go to "File" --&gt; "New" --&gt; "Project From Version Control" --&gt; "Git" (<b>NOT</b> Github). The URL for your repository is<br> <center><code>https://markus.teach.cs.toronto.edu/git/csc207-2018-05/userName</code></center><br> where <code>userName</code> is replaced by your MarkUs user name. The directory folder should be A2. Click <code>clone</code> and then <code>next</code> repeatedly until your project has been created. 
+			Once your project is created, add the 9 java files in the src folder from Markus to your repo with the message "Adding initial files" in one commit exactly as they are.
+        </p>
+                <p>
+            <strong>Don't change the code yet.</strong>
+        </p>
+        <p>
+            Run the program. You should see a window containing a few characters (animals) moving randomly. Every time you run the application, the behaviour will be different because the movement is randomly generated.<br/>
+			</p>
+	        <h3>
+            The Google Java Style Guide
+        </h3>
+        <p>
+            Google has published a <a target="_blank" href="https://google.github.io/styleguide/javaguide.html">Java Style Guide</a>. <strong>You must set up IntelliJ to use it for the first part of this assignment.</strong>
+        </p>
+        <p>
+            Follow the <a href="https://stackoverflow.com/questions/42979700/how-to-configure-google-java-code-formatter-in-intellij-idea-17">instructions on StackOverflow to install the google-java-format Plugin.</a>. Now when you select <code>Code -&gt;Reformat Code</code> it will follow the Java style guide as much as possible.
+        </p>
+        <p>
+            If you need help, search the web and the course discussion boards, and if you can't find an answer, ask!
+        </p>
+        <h2>
+            What to do
+        </h2>
+        <p>
+            You must do this assignment one step a time, <strong> committing (and pushing) your changes whenever you finish a step</strong>.
+        </p>
+        <h3>
+            Step 1: Create notes.txt
+        </h3>
+        <p>
+            Create a file called <code>notes.txt</code> in the <code>a2</code> directory of your repo. Copy and paste this into your file:
+        </p>
+        <pre style="border: 1px solid #006; background: #ccc">
+#########
+# Step 1
+
+Code affected: none
+
+Created this file.
+</pre>
+        <p>
+            and commit it with this commit message: <code>"Added notes.txt for keeping track of changes during a2."</code>. Copy and paste! Then push your changes.
+        </p>
+        <p>
+            <b>Sanity check:</b> Clone your repo again, somewhere else on your hard drive, and make sure that <code>a2/notes.txt</code> exists and has the expected contents. You can do this by running <code>git clone url</code> from the command line, where <code>url</code> is replaced by the url of your MarkUs repository (see above). If the file does not exist yet, keep trying until it does.
+        </p>
+        <h3>
+            Step 2: Reformat the starter code
+        </h3>
+        <p>
+            Open each .java file in turn and select <code>Source-&gt;Format</code>, or write click to Check Style, or use the keyboard shortcut. Save all the files as you go. Do not fix bugs, do not manually add spaces, and do not move anything around. Just use Google’s style formatter.
+        </p>
+        <p>
+            Run the program to make sure that it still works.
+        </p>
+        <p>
+            Make a note in <code>notes.txt</code> that you reformatted all the source code. Copy and paste this as your note:
+        </p>
+        <pre style="border: 1px solid #006; background: #ccc">
+#########
+# Step 2
+
+Code affected: all .java files
+
+Reformatted using the Google Java style formatter.
+</pre>
+        <p>
+            Git add each <code>.java</code> file, and also <code>notes.txt</code>. Commit and push.
+        </p>
+        <p>
+            You can do a sanity check, if you want to, at this point. It is not mandatory, but we recommend it.
+        </p>
+        <p>
+            Notice that, so far, everyone's repositories should have exactly the same changes in them.
+        </p>
+        <h3>
+            Step 3: Draw an inheritance diagram 
+	</h3>
+	<p>
+This can be done at the same time as Step 4.
+        </p>
+        <p>
+	Read through the code and draw an inheritance graph which includes all the classes defined in the program. If class <code>B</code> extends class <code>A</code>, then show an arrow pointing from <code>B</code> to <code>A</code>. If a class in the program explicitly inherits from a Java API class (e.g., Thread), then show this relationship as well in your diagram. To distinguish the Java API classes from the ones in our program, draw a rectangle around each Java API classname and an oval around each class name from our program. <strong>Note: this is not a UML diagram</strong>. This is for your understanding and you DO NOT need to submit this.
+	</p>
+	
+	<h3>
+            Step 4: Read through the code
+	</h3>
+	<p>Here are some questions you can ask yourself in order to better understand the code: <ul>
+	<li>
+	How do the animals move right now?
+	</li>
+	<li>
+	What are all the behaviours that we can expect from the animals? Which ones are common and which ones are unique?
+	</li>
+	<li>	
+	What are the fields and variables that we need to keep track of? To what objects do they belong right now? Does that seem right?
+	</li>
+	<li>
+	How different are animal behaviours in different method? Can they be simplified more?
+	</li>
+	<li>
+	What fixes will make the next fixes easier and faster?
+	</li>
+	</ul>
+    <p>
+            There are many design flaws. Here's a simple one: method <code>turnAround</code> in class <code>Pig</code> has duplicate code inside an unnecessary <code>if</code> statement. Fix it. That function only needs to be 2 lines long.
+        </p>
+        <p>
+            Add this note to <code>notes.txt</code>:
+        </p>
+        <pre style="border: 1px solid #006; background: #ccc">
+##################
+# Step 3
+
+Code affected: Pig.turnAround
+
+Flaw: duplicate code: There is an unnecessary if.
+
+Fix: replaced if statement with a single assignment statement.
+</pre>
+        <p>
+            <strong style="color:darkred">That is the format that every one of your notes should follow.</strong> It includes the list of methodss and instance variables that are affected, the flaw that you addressed, and a note about how you fixed it. The flaw and the fix should be concise: no more than a couple of sentences each. <strong>The TAs will be using these notes as the primary guide to marking your assignment, so be clear in your communication.</strong> Bad grammar and spelling, unclear descriptions, and excessive verbosity will all receive mark deductions.
+        </p>
+        <p>
+            Add <code>notes.txt</code> and <code>Pig.java</code>, commit (with the clear commit message above), and push.
+        </p>
+	<h3>
+		Steps 5 to N-2: Refactor the code and correct errors
+	</h3>
+Refactor the program to eliminate useless or repetitive code. Other flaws to avoid or eliminate: bad names, duplicate code, ugly code, nearly-duplicate classes, inappropriate print statements (when was the last time you ran an app that printed anything?), inappropriate use of <code>static</code>, chances to use inheritance, bad visibility modifiers, and recalculating a value over and over when it only needs to be done once are all candidates. You can refer back to the "Code Smell" links for more ideas. You will be marked on the quality of your fixes. By the end of this process, there should be no obvious design problems. 
+        </h3>
+        <p>
+            Every time you fix a flaw, add a feature, or create a new file, add a note to notes.txt that looks like the following where the value of <code>x</code> should increase by one each time:
+        </p>
+        <pre style="border: 1px solid #006; background: #ccc">
+#########
+# Step x
+
+Code affected: 
+
+Flaw: [NAME_OF_DESIGN/CODE_SMELL]
+
+Fix: 
+</pre>
+        <p>
+            That is the format that every one of your notes should follow: the list of files that are affected, the flaw that you addressed, and a note about how you fixed it. The flaw and the fix should be concise: no more than a couple of sentences each. <strong>The TAs will be using these notes as the primary guide to marking your assignment, so be clear in your communication.</strong> Bad grammar and spelling, unclear descriptions, and excessive verbosity will all receive marks deductions.
+        </p>
+        <p>
+            Add <code>notes.txt</code> and any affected files, commit (with a clear commit message), and push. This can be done by right clicking on the file.
+        </p>
+	<p>       
+ Continue identifying flaws (code smells) and <strong>fix one per push</strong>. After each fix, make a clear note in <code>notes.txt</code>, then add, commit (with a clear commit message), and push your changes.
+        </p>
+        <p>
+            Run Checkstyle after each fix, and address Checkstyle flaws that are directly associated with the code that you just fixed. By the end of these steps, you should have resolved all the Checkstyle warnings. <strong>You will lose marks if there are any Checkstyle warnings left after your final push.</strong>
+        </p>
+	<p>
+	Here is one feature you can fix. Currently, the animals can go outside of the ranges of the farm, which will result in uncaught exceptions. Think about ways you can fix this so no animal leaves the farm and implement it. Because the movements are randomly generated, we strongly recommend using the debugger to identify and fix this bug so you don't have to run the application many times to get the specific behaviour and potentially waste a lot of time. This will also be an investment for future.
+	</p>
+        
+        <h3>
+            Step N-1: finish the comments and Javadoc
+        </h3>
+        <p>
+            It is possible that you added comments and Javadoc while you read through and corrected the code. However, now is the time to go back and make sure that there are enough comments to fully describe each class, that no comment describes easily-read code (forcing the reader to read the same thing twice), and to make sure that the comments match the code (and not a previous version of the code).
+        </p>
+        <p>
+            Include "finalize Javadoc" in <code>notes.txt</code>, and add, commit, and push your changes. If you wrote significant amounts of Javadoc and/or comments in an earlier step, say which one.
+        </p>
+        <h3>
+            Step N: Add a new functionality to the application (e.g., add a new animal).
+	</h3>
+	 <p>
+            Now that your code is beautiful, design and add a new functionality (e.g., add a new animal or another class). In terms of complexity, it can be at the same level of Chicken or Pig classes. There are many possibilities, and we're running MOSS to detect similarities, so please do not copy from each other. Whatever functionality you choose, write the code yourself.
+        </p>
+        <p>
+            Make a final note in <code>notes.txt</code> clearly describing the new functionality. This is not a flaw, so just describe your change in a concise paragraph or bullet-point form after the <code># Step N</code> note header.
+        </p>
+	<h2>In Summary:</h2>
+You are to work on the following:
+	<ul>
+	<li>
+	understanding the code, making an inheritance diagram and answering the given questions
+	</li>
+	<li>
+	properly formatting the code
+	</li>
+	<li>
+	redesigning the class structure and fixing internal flaws within the classes, code smells, etc.
+	</li>
+	<li>
+	ensuring correct and sufficient internal comments and Javadoc comments
+	</li>
+	<li>
+	Adding one new functionality to the application.
+	</li>
+	<li>
+	recording each activity in the <code>notes.txt</code> file
+	</li>
+	</ul>
+    </body>
+</html>
+

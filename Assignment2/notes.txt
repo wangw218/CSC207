@@ -1,0 +1,527 @@
+#########
+# Step 1
+
+Code affected: none
+
+Created this file.
+#########
+# Step 2
+
+Code affected: all .java files
+
+Reformatted using the Google Java style formatter.
+##################
+# Step 3
+
+Code affected: Pig.turnAround
+
+Flaw: duplicate code: There is an unnecessary if.
+
+Fix: replaced if statement with a single assignment statement.
+##################
+# Step 4
+
+Code affected: AnimalManure.java file
+
+Flaw: file, class, fields' names formats and access modifiers are not proper.
+ 
+Fix: reformatted names and change access modifiers.
+##################
+# Step 5
+
+Code affected: AnimalManure.draw
+
+Flaw: the order of parameter of drawString is not proper.
+ 
+Fix: changed the order of x and y.
+##################
+# Step 6
+
+Code affected: AnimalManure.file
+
+Flaw: the parameters of the comments of the constructor of AnimalManure is unnecessary.
+
+Fix: removed the parameters of the comments of the constructor of AnimalManure.
+##################
+# Step 7
+
+Code affected: AnimalFood.java file
+
+Flaw: the access modifiers are not proper.
+
+Fix: changed the access modifiers.
+##################
+# Step 8
+
+Code affected: Chicken.java file and AnimalManure.java file
+
+Flaw: the access modifiers and the names of fields called from AnimalManure are not proper in Chicken.java;
+      the access modifiers of AnimalManure.java are not proper.
+
+Fix: changed the access modifiers and the names of fields called from AnimalManure in Chicken.java;
+     changed the access modifiers of AnimalManure.java.
+##################
+# Step 9
+
+Code affected: Cow.java file
+
+Flaw: the access modifiers and the names of fields called from AnimalManure are not proper.
+
+Fix: changed the access modifiers and the names of fields called from AnimalManure.
+##################
+# Step 9
+
+Code affected: Pig.java file
+
+Flaw: the access modifiers and the names of fields called from AnimalManure are not proper.
+
+Fix: changed the access modifiers and the names of fields called from AnimalManure.
+##################
+# Step 10
+
+Code affected: Egg.java, Human.java and Wind.java files
+
+Flaw: the access modifiers are not proper.
+
+Fix: changed improper access modifiers
+##################
+# Step 11
+
+Code affected: Main.java file
+
+Flaw: the fields' names called from AnimalManure.java are not proper since the changes of names in AnimalManure.java.
+
+Fix: changed the fields' names called from AnimalManure.java.
+##################
+# Step 12
+
+Code affected: AnimalFood.java file
+
+Flaw: the parameters of the comments of the constructor of AnimalFood is unnecessary.
+
+Fix: removed the parameters of the comments of the constructor of AnimalFood.
+##################
+# Step 13
+
+Code affected: AnimalFood.java file
+
+Flaw: spelling mistake and improper concepts of the comments and javadoc of the methods and the sequence of parameter is wrong.
+
+Fix: Corrected the "appearance" spelling and the wrong comments and javadoc of AnimalFood.blownLeft and AnimalFood.blownRight
+     and the order of x,y in AnimalFood.draw.
+##################
+# Step 14
+
+Code affected: AnimalFood.blownUp, AnimalFood.blownDown, AnimalFood.blownLeft, AnimalFood.blownRight.
+
+Flaw: unless code: unnecessary to reassign a move if there is not a change of a move.
+
+Fix: deleted the useless x = x; y = y;
+##################
+# Step 15
+
+Code affected: Chicken.java and Cow.java and Pig.java and Human.java files
+
+Flaw: fields' name: the name of fields about the first and second coordinates are not proper.
+
+Fix: changed the first coordinate r to first, the second coordinate c to second.
+##################
+# Step 16
+
+Code affected: Chicken.reverseAppearance and Cow.reverseAppearance and Pig.reverseAppearance and Human.reverseAppearance
+
+Flaw: the type of "reverse" is not proper: it needs more storage and speed is slow.
+
+Fix: changed the type of "reverse" field from "String" to "StringBuilder".
+##################
+# Step 17
+
+Code affected: Human.dropFood
+
+Flaw: misspelling field: food
+
+Fix: Corrected the spell of "food".
+##################
+# Step 18
+
+Code affected: Human.dropFood
+
+Flaw:  the wrong order of the value passed to parameters a and b
+
+Fix: reversed the order of the first and second coordinates.
+##################
+# Step 19
+
+Code affected: Animal.java
+
+Flaw:  too many repeated methods in Chicken.java, Cow.java, Pig.java.
+
+Fix: Created a superclass to be inherited.
+##################
+# Step 20
+
+Code affected: Cow.java, Pig.java, Chicken.java
+
+Flaw:  methods inherited from superclass need not be written.
+
+Fix: Deleted the method inherited from superclass and change the method name of "Digest" to "clearStomach" in Chicken.java.
+##################
+# Step 21
+
+Code affected: Animal.java
+
+Flaw:  the access modifiers are not proper.
+
+Fix: Change the access modifiers.
+##################
+# Step 22
+
+Code affected: Cow.clearStomach and Pig.clearStomach and Chicken.clearStomach
+
+Flaw:  Access the static fields via class instance; the @return tag is missing the description.
+
+Fix: Used the class itself to access the static fields and add descriptions for @return tag.
+##################
+# Step 23
+
+Code affected: the constructor of Cow class
+
+Flaw:  the initial value is false
+
+Fix: changed the initiation of goingRight = true
+##################
+# Step 24
+
+Code affected: Pig.clearStomach
+
+Flaw:  the order of value passed in is wrong
+
+Fix: changed the order of first and second in newManure.setLocation().
+##################
+# Step 25
+Code affected: Chicken.move and Chicken.clearStomach
+
+Flaw:  the value used about d1 in Chicken.move and the order of first and second coordinate in Chicken.layEgg are not proper.
+
+Fix: Changed "d1" to d2 and d3 properly and change of order of first and second coordinate.
+##################
+# Step 26
+Code affected: Chicken.anEggHere and Human.anEggHere
+
+Flaw:  Name Convention : aneggishere
+
+Fix: Changed aneggishere to anEggHere.
+##################
+# Step 27
+Code affected: Human.turnAround
+
+Flaw: duplicate code: There is an unnecessary if.
+
+Fix: replaced if statement with a single assignment statement.
+##################
+# Step 28
+Code affected: Human.drawString
+
+Flaw: the order of x and y
+
+Fix: rearranged the order of x and y
+##################
+# Step 29
+Code affected: Human.move
+
+Flaw: the order of first and second coordinates
+
+Fix: rearranged the order of first and second coordinates.
+##################
+# Step 30
+Code affected: Human.windBlowingUp and Human.windBlowingLeft
+
+Flaw: the logic and comments are not proper.
+
+Fix: rewrote codes and comments to satisfy the logic.
+##################
+# Step 31
+Code affected: Human.java and Egg.java
+
+Flaw: the access modifier of the second coordinate "y" should be private
+
+Fix: changed "y" to be private and added a getter method for y in Egg.java and changed the corresponding codes in Human.java
+##################
+# Step 32
+Code affected: AnimalFood.drawString and AnimalFood.blownUp and AnimalFood.blownDown
+
+Flaw: the order of first and second coordinates in drawString and the change of direction in y in AnimalFood.blownUp and AnimalFood.blownDown are not proper
+
+Fix: rearranged the order of first and second coordinates in AnimalFood.drawString and the directions of y in AnimalFood.blownUp and AnimalFood.blownDown.
+##################
+# Step 33
+Code affected: Animal.drawString and AnimalManure.drawString
+
+Flaw: the order of first and second coordinates are reversed.
+
+Fix: rearranged the order of first and second coordinates in g.fillText()
+##################
+# Step 34
+Code affected: Main.java
+
+Flaw: the locations of some animals are set wrong.
+
+Fix: reset the wrong locations of some animals
+##################
+# Step 35
+Code affected: Main.java
+
+Flaw: name convention: "lolfood"
+
+Fix: changed "lolfood" to "food"
+##################
+# Step 36
+Code affected: Main.java
+
+Flaw: useless code: AnimalManure cannot move
+
+Fix: Deleted the elif with the empty body about AnimalManure.
+##################
+# Step 37
+Code affected: Chicken.move
+
+Flaw: left and right should be first coordinate and up and down should be second coordinate.
+
+Fix: changed the left and right be first coordinate and up and down be the second.
+##################
+# Step 38
+Code affected: AnimalManure.java, Chicken.clearStomach, Cow.clearStomach, Pig.clearStomach, Human.java and Main.java
+
+Flaw: the static field ManureAppearance in AnimalManure and the name convention of chickenManureAge in Human.java
+
+Fix: changed the field ManureAppearance to non-static in AnimalManure and fixed the name of chickenManureAge in Human.java
+     and changed the corresponding codes in Chicken.clearStomach, Cow.clearStomach, Pig.clearStomach and Main.java
+##################
+# Step 39
+Code affected: Wind.java
+
+Flaw: the structure of the codes is messy.
+
+Fix: changed the structure and added brackets for if statements to help read
+##################
+# Step 40
+Code affected: Human.move
+
+Flaw: the structure of the codes is messy.
+
+Fix: changed the structure and added brackets for if statements to help read
+##################
+# Step 41
+Code affected: Human.move, Animal.move, Chicken.move, AnimalFood.blowUp, AnimalFood.blowDown, AnimalFood.blowLeft, AnimalFood.blowRight
+
+Flaw: Sometimes the animals and human and AnimalFood would go out of the farm.
+
+Fix: added limits for first and second coordinates to avoid animals and human and food to go out of the farm.
+##################
+# Step 42
+Code affected: Human.dropFood
+
+Flaw: Sometimes Human would drop food out of the farm.
+
+Fix: added limits for first and second coordinates to avoid human to drop food out of the farm.
+##################
+# Step 43
+Code affected: Human.move
+
+Flaw: Human cannot move towards the egg exactly.
+
+Fix: changed the "else" statement to "else if" statement.
+##################
+# Step 44
+Code affected: Animal.java, Pig.java, Cow.java and Chicken.java
+
+Flaw: Pig and Cow can not move horizontally.
+
+Fix: Used the superclass Animal.java to help Pig, Cow and Chicken horizontally and vertically and fix the comments.
+##################
+# Step 45
+Code affected: Animal.clearStomach, Pig.clearStomach, Cow.clearStomach and Chicken.clearStomach
+
+Flaw: useless return type
+
+Fix: changed the return type to "void" and deleted the return the statements and added comments
+##################
+# Step 46
+Code affected: Human.move
+
+Flaw: the egg did not disappear when Human picked up it
+
+Fix: set the thing in egg's position to "null" when Human picked the egg
+##################
+# Step 47
+Code affected: Human.move and Animal.java
+
+Flaw: the access modifier of fields in Animal and a useless code in Human.move
+
+Fix: changed goingUp and goingRight from "default" to "private" in Animal.java and 1 * 10 to 10, 1 * 6 to 6 in Human.move
+##################
+# Step 48
+Code affected: Human.java and Animal.move
+
+Flaw: the human and animal would not turn around as they change direction.
+
+Fix: added an attribute "goingUp" and turnAroundVertically method in human.java and made the human and animals to
+     turn around once they move to a different direction in Human.move and Animal.move
+##################
+# Step 49
+Code affected: Human.move
+
+Flaw: when there was no egg, Human should have the ability to move vertically.
+
+Fix: added a if(goingUp) statement to let Human move vertically and fix the comments
+##################
+# Step 50
+Code affected: Animal.move
+
+Flaw: a bug here: Animal would go to right bottom
+
+Fix: changed the code where the animal should turn around and added comments
+##################
+# Step 51
+Code affected: Human.move
+
+Flaw: design structure: the there is no egg to pick, the direction the Human would move
+      useless code: d = Math.random()
+
+Fix: redesigned the codes when there was no egg to pick, where the human should go and deleted a useless code Math.random()
+     fixed the comments
+##################
+# Step 52
+Code affected: Main.java, Animal.java, AnimalFood, AnimalManure, Egg.java, Human.java
+
+Flaw: Excessive use of literals : "6" and "10"
+
+Fix: replaced "10" and "6" using the field Main.charWidth and Main.charHeight() and add attributes row and column
+     and changed the responding codes in Animal.java and Human.java and change the size the canvas in Main.java
+##################
+# Step 53
+Code affected: Animal.java and Human.java
+
+Flaw: bug: ArrayIndexOutOfBounds: the max index is the length - 1
+
+Fix: changed the field "row" and "column" to the max index and fixed their value
+##################
+# Step 54
+Code affected: Human.move and Chicken.anEggHere
+
+Flaw: the productivity of the Human pick up eggs was too low
+
+Fix: changed Chicken.anEggHere to EggsHere to produce a ArrayList containing all current eggs in Chicken.java and
+     let the Human pick up the nearest egg every time in Human.move
+##################
+# Step 55
+Code affected: all files except Main.java and Wind.java
+
+Flaw: comments: some are not right; some lack comments
+
+Fix: fixed the comments and changed the access modifier of eggShape in Egg.java
+##################
+# Step 56
+Code affected: Wind.java
+
+Flaw: duplicate code: windBlowingUp and windBlowingLeft has duplicate codes.
+
+Fix: created a helper function and fixed the comments
+##################
+# Step 57
+Code affected: Human.move
+
+Flaw: Index 0 out of size 0: code designs in if and else statement
+
+Fix: changed the if else statement to if else if statement.
+##################
+# Step 58
+Code affected: Chicken.java, Cow.java, Human.java, Pig.java and Main.java
+
+Flaw: design:the Human and animals might disappear and the manure could not disappear quickly on the canvas
+
+Fix: changed the myAnimalFarms to ArrayList and created two manure and manureAge for animals in Human.java
+     and changed the corresponding codes to make manure disappear quickly
+###############
+# Step 59
+Code affected: Animal.java, AnimalFood.java, Chicken.java, Human.java and Main.java
+
+Flaw: design:the animals could not eat food
+
+Fix: added the functionality to let animals eat food and fixed comments
+###############
+# Step 60
+Code affected: Chicken.java, Cow.java, Pig.java, Human.java and Main.java
+
+Flaw: design: constructor
+
+Fix: redesigned a constructor for Human and Animals and changed the corresponding codes of them in Main.java
+###############
+# Step 61
+Code affected: Chicken.java, Human.java and Main.java
+
+Flaw: code structure:efficiency of for loop
+
+Fix: replaced the for loop using enhanced for loop
+###############
+# Step 62
+Code affected: AnimalManure.java, Human.java and Main.java
+
+Flaw: efficiency of Animal manures
+
+Fix: deleted the Human.manure and Human.manureAge and used Human.myFarmAnimals to store AnimalManure and added a method
+     to calculate the start time of the AnimalManure and changed the corresponding codes an Main.java
+###############
+# Step 63
+Code affected: Wind.windBlowingUp and Wind.windBlowingLeft
+
+Flaw: the fields LastUp and LastLeft would not be updated.
+
+Fix: changed the value of LastUp and LastLeft in Wind.windBlowingUp and Wind.windBlowingLeft before returning the value
+###############
+# Step 64
+Code affected: all files except Egg.java and Wind.java
+
+Flaw: useless codes and improper formats
+
+Fix: deleted the useless codes and reformatted all files except Egg.java and Wind.java
+###############
+# Step 65
+Code affected: Main.java
+
+Flaw: magic numbers
+
+Fix: created an Array to save the magic numbers and use them
+###############
+# Step 66
+Code affected: all java files
+
+Fix: fixed and added the commends of all of the files
+###############
+# Step 67
+Code affected: Cat.java and Human.java
+
+Fix: 1. Create a new Cat.java class extending Animal.java with similar methods with other animals: Pig,Chicken and
+        Cow and the different appearance "CAT" and color "Color.Blue.darker().darker()" and manure "#".
+     2. Create a Cat in Main.java with the location (20, 20).
+     3. Let the Cat move and draw the Cat in Main.java.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
